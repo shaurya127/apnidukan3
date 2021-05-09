@@ -937,8 +937,13 @@ section {
 }
 
 #header.header-scrolled {
+<<<<<<< HEAD
   border-color: #fff;
   box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
+=======
+  background: rgba(39, 133, 39, 0.8);
+  height: 60px;
+>>>>>>> a5448df81124fc0eacabc840bb7f4c28bae968d3
 }
 
 #header .logo {
@@ -1045,7 +1050,13 @@ section {
 
 .navbar .dropdown ul a {
   padding: 10px 20px;
+<<<<<<< HEAD
   text-transform: none;
+=======
+  font-size: 15px;
+  /* height: 10%; */
+  color: #362f10;
+>>>>>>> a5448df81124fc0eacabc840bb7f4c28bae968d3
 }
 
 .navbar .dropdown ul a i {
@@ -1055,7 +1066,12 @@ section {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
+<<<<<<< HEAD
   color: #0ec358;
+=======
+  color: #a1612d;
+  height: 10%;
+>>>>>>> a5448df81124fc0eacabc840bb7f4c28bae968d3
 }
 
 .navbar .dropdown:hover > ul {
@@ -1118,7 +1134,11 @@ section {
   right: 0;
   left: 0;
   bottom: 0;
+<<<<<<< HEAD
   background: #0ec358;
+=======
+  background: rgba(27, 94, 77, 0.9);
+>>>>>>> a5448df81124fc0eacabc840bb7f4c28bae968d3
   transition: 0.3s;
   z-index: 999;
 }
