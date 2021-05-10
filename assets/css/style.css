@@ -18,6 +18,106 @@ body {
   line-height: 1.5;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* body {
+  margin: 0px;
+  font-family: "segoe ui";
+} */
+
+.nav {
+  height: 50px;
+  width: 100%;
+  /* background-color: #0ec358; */
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #0ec358;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #0ec358;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: white;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #0ec358;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
 a {
   color: #777;
   text-decoration: none;
@@ -1090,7 +1190,7 @@ section {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #0ec385;
+  color: #124265;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -1104,7 +1204,7 @@ section {
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
-    display: block;
+    display: none;
   }
   .navbar ul {
     display: none;
@@ -1118,20 +1218,21 @@ section {
   right: 0;
   left: 0;
   bottom: 0;
-  background: #0ec385;
+  background: rgba(10, 38, 58, 0.9);
   transition: 0.3s;
   z-index: 999;
 }
 
 .navbar-mobile .mobile-nav-toggle {
+  display: block;
   position: absolute;
   top: 15px;
   right: 15px;
 }
 
 .navbar-mobile ul {
-  display: block;
-  position: absolute;
+  display: none;
+  position: fixed;
   top: 55px;
   right: 15px;
   bottom: 15px;
@@ -1145,13 +1246,13 @@ section {
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #0ec385;
+  color: #124265;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
-  color: #0ec385;
+  color: #2487ce;
 }
 
 .navbar-mobile .getstarted {
@@ -1167,10 +1268,11 @@ section {
   opacity: 1;
   visibility: visible;
   background: #fff;
-  box-shadow: #0ec385;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
 .navbar-mobile .dropdown ul li {
+  display: block;
   min-width: 200px;
 }
 
@@ -1185,7 +1287,7 @@ section {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover > a {
-  color: #0ec385;
+  color: #2487ce;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
